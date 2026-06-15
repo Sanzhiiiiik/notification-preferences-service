@@ -207,3 +207,22 @@ The domain layer is independent from HTTP and PostgreSQL.
 The application layer coordinates use-cases.
 The infrastructure layer handles persistence.
 The HTTP layer handles validation and routing.
+
+## Production improvements
+
+This is an assessment implementation focused on domain modeling, API design, persistence and tests.
+
+For production, I would add:
+
+- authentication and authorization;
+- admin API for managing global policies;
+- audit log for preference changes;
+- Prometheus metrics;
+- request tracing;
+- rate limiting;
+- CI/CD pipeline;
+- database migration tool with versioned migrations;
+- separate test database;
+- stricter idempotency using Idempotency-Key;
+- policy conflict resolution strategy for allow/deny combinations;
+- OpenAPI documentation.
